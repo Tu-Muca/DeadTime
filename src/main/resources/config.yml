@@ -1,0 +1,8 @@
+#复活需要时间
+NeedTime: 10
+#服务器重启后是否保留死亡状态
+# true则保留
+# false则会立即复活
+KeepDead: true
+#是否原地复活
+KeepDeadLocation: true

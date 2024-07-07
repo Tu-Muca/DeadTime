@@ -1,0 +1,9 @@
+name: DeadTime
+version: '${project.version}'
+main: org.example.test.deadtime.DeadTime
+api-version: '1.8'
+commands:
+  DeadTime:
+    description: "DeadTime Main Command"
+    aliases: [deadtime,dt,Deadtime]
+    usage: §c§l[DeadTime] /DeadTime <参数>
