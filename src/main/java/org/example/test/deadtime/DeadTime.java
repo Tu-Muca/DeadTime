@@ -217,6 +217,14 @@ public class DeadTime extends JavaPlugin {
         }
     }
 
+    public void SetPass(Player player,boolean b){
+        datafile.set((player.getName() + ".pass"),b);
+    }
+
+    public boolean GetPass(Player player){
+        return datafile.getBoolean((player.getName() + ".pass"));
+    }
+
     //language
     public String LGetFix(){
         return LanguageFile.getString("Fix");

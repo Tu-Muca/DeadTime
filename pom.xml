@@ -6,7 +6,7 @@
 
   <groupId>org.example.test</groupId>
   <artifactId>DeadTime</artifactId>
-  <version>1.0-SNAPSHOT</version>
+  <version>1.1-SNAPSHOT</version>
   <packaging>jar</packaging>
 
   <name>DeadTime</name>
@@ -24,7 +24,7 @@
             <version>3.3.0</version>
             <configuration>
                 <outputDirectory>
-                    C:\Users\Administrator\Desktop\TMC\[25566]lobby\plugins
+                    C:\Users\Administrator\Desktop\TMC\[25569]survival\plugins
                 </outputDirectory>
             </configuration>
         </plugin>

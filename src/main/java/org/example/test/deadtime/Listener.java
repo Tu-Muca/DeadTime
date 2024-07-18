@@ -2,6 +2,8 @@ package org.example.test.deadtime;
 
 import org.bukkit.GameMode;
 import org.bukkit.event.EventHandler;
+import org.bukkit.event.entity.EntityDamageEvent;
+import org.bukkit.event.entity.EntityDeathEvent;
 import org.bukkit.event.entity.PlayerDeathEvent;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.event.player.PlayerRespawnEvent;
@@ -15,10 +17,17 @@ public class Listener implements org.bukkit.event.Listener {
 
     @EventHandler
     public void OnPlayerDeath(PlayerDeathEvent e){
+        EntityDamageEvent Cause = e.getEntity().getLastDamageCause();
+        if (Cause != null && Cause.getCause() != EntityDamageEvent.DamageCause.VOID){
+            DeadTime.SetPass(e.getEntity(),true);
+        }
     }
 
     @EventHandler
     public void OnPlayerRespwan(PlayerRespawnEvent e){
+        if (!DeadTime.GetPass(e.getPlayer())){
+            return;
+        }
         DeadTime.FSetXYZ(e.getPlayer());
         DeadTime.FSetPlayerWorld(e.getPlayer());
         DeadTime.RewpawnTP(e.getPlayer());
